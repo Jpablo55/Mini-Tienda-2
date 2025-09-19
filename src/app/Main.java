@@ -1,14 +1,16 @@
 package app;
 
+import app.model.Producto;
+import app.service.ProductoService;
+
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Main{
-    static ArrayList<Producto> productos = new ArrayList<>();
-    static HashMap<String, Integer> stocks = new HashMap<>();
-    static double precioTotal = 0;
+
     public static void main(String[] args){
+        ProductoService service = new ProductoService();
         boolean exit = false;
         while (!exit) {
             String opcMenu = JOptionPane.showInputDialog(null,
@@ -29,22 +31,22 @@ public class Main{
             }
             switch (opcMenu) {
                 case "1":
-//                    agregarProducto();
+                    service.agregarProducto();
                     break;
                 case "2":
-//                    listarInventario();
+                    service.listarInventario();
                     break;
                 case "3":
-//                    comprarProducto();
+                    service.comprarProducto();
                     break;
                 case "4":
-//                    mostrarEstadisticas();
+                    service.mostrarEstadisticas();
                     break;
                 case "5":
-//                    buscarProducto();
+                    service.buscarProducto();
                     break;
                 case "6":
-//                    ticketFinal();
+                    service.ticketFinal();
                     exit = true;
                     break;
                 default:

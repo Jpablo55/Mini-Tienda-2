@@ -1,4 +1,4 @@
-package app;
+package app.model;
 
 public class Electrodomestico extends Producto{
     public Electrodomestico(double precio, String nombre) {

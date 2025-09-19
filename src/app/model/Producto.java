@@ -1,4 +1,4 @@
-package app;
+package app.model;
 
 abstract public class Producto {
     private String nombre;
